@@ -1,5 +1,7 @@
 # DockerTest
 
+## Command Line
+
 ### Running the application
 
 ``./gradlew clean bootRun``
@@ -25,3 +27,16 @@ The JAR file would be created in the `build/libs` folder.
 You can now run the application like -
 
 ``java -jar build/libs/server.jar``
+
+
+## Docker
+
+To build the docker image -
+
+`` ./gradlew buildDocker ``
+
+
+
+You can push the image to the registry using -
+
+`` ./gradlew buildDocker -Ppush ``
