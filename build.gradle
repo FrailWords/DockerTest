@@ -40,3 +40,5 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('junit:junit:4.12')
 }
+
+jar.archiveName = "server.jar"
