@@ -13,3 +13,15 @@ E.g.
 ### Running the tests
 
 ``./gradlew clean test``
+
+### Build JAR file and run
+
+You can create a JAR file for this application using -
+
+``./gradlew clean build jar``
+
+The JAR file would be created in the `build/libs` folder.
+
+You can now run the application like -
+
+``java -jar build/libs/server.jar``
