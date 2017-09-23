@@ -36,7 +36,21 @@ To build the docker image -
 `` ./gradlew buildDocker ``
 
 
-
 You can push the image to the registry using -
 
 `` ./gradlew buildDocker -Ppush ``
+
+The image would be available at -
+
+https://hub.docker.com/r/sriramvish/dockertest/
+
+
+## Publish Artifact
+
+To publish a new artifact (JAR) to Bintray, update the `version` property in build.gradle and then run -
+
+`` ./gradlew clean build bintrayUpload ``
+
+The newly versioned artifact would now be available at -
+
+https://bintray.com/frailwords/ebi_test/ebi_test

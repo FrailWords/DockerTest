@@ -24,7 +24,7 @@ apply plugin: 'docker'
 apply plugin: 'com.novoda.bintray-release'
 
 group = 'ebi.tech'
-version = '1.0'
+project.version = '1.0'
 sourceCompatibility = 1.8
 compileKotlin {
 	kotlinOptions.jvmTarget = "1.8"
@@ -50,7 +50,7 @@ jar {
     archiveName = 'server.jar'
     manifest {
         attributes 'Implementation-Title': 'EBI Test',
-                'Implementation-Version': version
+                'Implementation-Version': project.version
     }
 }
 
@@ -68,10 +68,13 @@ task buildDocker(type: Docker, dependsOn: build) {
 }
 
 publish {
+    bintrayUser = 'frailwords'
+    bintrayKey = 'f966c2f36dfe23b16380f5c9a1696402b89f2969'
+    dryRun = false
     repoName = 'ebi_test'
     groupId = 'ebi_test'
     artifactId = 'ebi_test_release'
-    publishVersion = version
+    publishVersion = project.version
     desc = 'JAR release'
     website = 'https://github.com/FrailWords/DockerTest.git'
 }
