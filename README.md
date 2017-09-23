@@ -70,3 +70,5 @@ To publish a new artifact (JAR) to Bintray, update the `version` property in bui
 The newly versioned artifact would now be available at -
 
 https://bintray.com/frailwords/ebi_test/ebi_test
+
+**NOTE** On upgrade of version, the Dockerfile also needs to be updated to point this new version of the artifact.
