@@ -44,6 +44,22 @@ The image would be available at -
 
 https://hub.docker.com/r/sriramvish/dockertest/
 
+###
+
+To run the docker image locally, first pull the image from the Docker registry -
+
+`` docker pull sriramvish/dockertest ``
+
+And then run using -
+
+`` docker run -t sriramvish/dockertest ``
+
+This will run the service at port `8080`.  If this port is not free, you can run something like -
+
+`` docker run -p 7000:8080 -t sriramvish/dockertest ``
+
+to run it on another port (in this case 7000).
+
 
 ## Publish Artifact
 
